@@ -5,6 +5,8 @@ var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAni
 window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 window.requestAnimationFrame = requestAnimationFrame;
 
+var score1 = document.getElementById("score1");
+var score2 = document.getElementById("score2");
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var keyW = false;
@@ -17,6 +19,9 @@ var player2X = 780;
 var player2Y = 10;
 var raf;
 var running = false;
+
+var player1Score = 0;
+var player2Score = 0;
 
 var ball = {
 	x: 400,
@@ -48,34 +53,50 @@ function draw() {
 	ball.x += ball.vx;
 	ball.y += ball.vy;
 
-	var ballCollisionX = ball.x - ball.radius;
-	var ballCollisionY = ball.y - ball.radius;
+	var ballCollisionX1 = ball.x - ball.radius;
+	var ballCollisionX2 = ball.x + ball.radius;
+	var playerCollision1X = player1X + 10;
+	var playerCollision1Y = player1Y + 50;
+	var playerCollision2X = player2X + 10;
+	var playerCollision2Y = player2Y + 50;
 
+	// Canvas Collision
 	if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) { 
 		ball.vy = -ball.vy;
-	} 
-	if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
+	}
+	if (ball.x + ball.vx > canvas.width) {
+		ball.vx = -ball.vx;
+		player1Score += 1;
+	}
+	if (ball.x + ball.vx < 0) {
+		ball.vx = -ball.vx;
+		player2Score += 1;
+	}
+	
+	// Player Collision Detection
+	if (player1X < ball.x + ball.radius && playerCollision1X > ball.x && player1Y < ball.y + ball.radius && playerCollision1Y > ball.y) {
 		ball.vx = -ball.vx;
 	}
-	if (ballCollisionX == player1X || ballCollisionY == player1Y) {
+	if (player2X < ball.x + ball.radius && playerCollision2X > ball.x && player2Y < ball.y + ball.radius && playerCollision2Y > ball.y) {
 		ball.vx = -ball.vx;
 	}
-	if (ballCollisionX == player2X || ballCollisionY == player2Y) {
-		ball.vx = -ball.vx;
-	}
- 
+
+	// Player Movement
 	if (keyS == true) {
-		player1Y += 5;
+		player1Y = Math.min(750, player1Y += 5);
 	}
 	if (keyW == true) {
-  		player1Y -= 5;
+		player1Y = Math.max(0, player1Y -= 5);
 	}
 	if (keyDown == true) {
-		player2Y += 5;
+		player2Y = Math.min(750, player2Y += 5);
 	}
 	if (keyUp == true) {
-		player2Y -= 5;
+		player2Y = Math.max(0, player2Y -= 5);
 	}
+
+	score1.textContent = player1Score;
+	score2.textContent = player2Score;
 }
 
 window.requestAnimationFrame(draw);
