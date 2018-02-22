@@ -1,5 +1,5 @@
 # Pong
-Pong built with HTML Canvas in JavaScript.
+Pong built with the HTML Canvas in JavaScript.
 
 ![Pong](https://github.com/kazijawad/Pong/blob/master/game.jpg)
 
