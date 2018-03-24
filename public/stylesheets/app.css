@@ -17,12 +17,22 @@ h2 {
 canvas {
 	margin: auto;
 	display: block;
-	margin-top: 3%;
+	margin-top: 2%;
 	border-style: solid;
 	border-color: black;
 	background-color: white;
 }
+.display {
+	font-size: 0;
+}
+#start {
+	background: white;
+	width: 180px;
+	padding: 4px 0;
+	border-radius: 3px;
+}
 .zoom {
-    zoom: 0.9; /* all browsers */
+	zoom: 0.9; /* all browsers */
+	transform: scale(1);
     -moz-transform: scale(0.9); /* Firefox */
 }

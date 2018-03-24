@@ -5,6 +5,8 @@ var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAni
 window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 window.requestAnimationFrame = requestAnimationFrame;
 
+var startButton = document.getElementById("start");
+var scoreboard = document.getElementById("scoreboard");
 var score1 = document.getElementById("score1");
 var score2 = document.getElementById("score2");
 var canvas = document.getElementById("canvas");
@@ -14,14 +16,20 @@ var keyS = false;
 var keyUp = false;
 var keyDown = false;
 var player1X = 10;
-var player1Y = 10;
+var player1Y = 360;
 var player2X = 780;
-var player2Y = 10;
+var player2Y = 360;
 var raf;
 var running = false;
 
 var player1Score = 0;
 var player2Score = 0;
+
+function init() {
+	scoreboard.classList.add("display");
+}
+
+init();
 
 var ball = {
 	x: 400,
@@ -99,7 +107,10 @@ function draw() {
 	score2.textContent = player2Score;
 }
 
-window.requestAnimationFrame(draw);
+startButton.addEventListener("click", function() {
+	scoreboard.classList.remove("display");
+	window.requestAnimationFrame(draw);
+});
 
 function onKeyDown(event) {
   	var keyCode = event.keyCode;

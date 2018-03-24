@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>JS Game</title>
+	<title>Pong</title>
+	<link rel="shorcut icon" href="../public/favicon.ico">
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../public/stylesheets/app.css">
 </head>
 <body class="zoom">
 
 <h1>Pong</h1>
-<h2><span id="score1"></span>:<span id="score2"></span></h2>
+<h2>
+	<span id="scoreboard" class="display">
+		<span id="score1"></span>:
+		<span id="score2"></span>
+	</span>
+	<div>
+		<button type="button" id="start">Start</button>
+	</div>
+</h2>
 
 <canvas id="canvas"></canvas>
 
