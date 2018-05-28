@@ -1,7 +1,7 @@
 # Pong
 Pong built with the HTML Canvas in JavaScript.
 
-![Pong](https://github.com/kazijawad/Pong/blob/master/public/preview.jpg)
+![Preview](https://github.com/kazijawad/Pong/blob/master/public/images/preview.jpg)
 
 ## Features
 - Collision Detection
