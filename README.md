@@ -1,7 +1,7 @@
 # Pong
 Pong built with HTML Canvas in JavaScript. The game is controlled by two players. The first player uses the WASD keys, while the second player uses the arrow keys.
 
-![Preview](https://github.com/kazijawad/Pong/blob/master/public/images/preview.jpg)
+![Preview](https://github.com/kazijawad/Pong/blob/master/assets/preview.jpg)
 
 ## Features
 - Collision Detection
