@@ -2,24 +2,26 @@
 <html>
 <head>
 	<title>Pong</title>
-	<link rel="shorcut icon" href="public/favicon.ico">
-	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="public/stylesheets/style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed">
+	<link rel="shorcut icon" type="image/png" href="assets/pong.png">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body class="zoom">
-	<h1>Pong</h1>
-	<h2>
-		<span id="scoreboard" class="display">
-			<span id="score1"></span>:
-			<span id="score2"></span>
-		</span>
-		<div>
-			<button type="button" id="start">Start</button>
-		</div>
-	</h2>
+<body>
+	<div class="container">
+		<h1 class="heading-primary">Pong</h1>
+		<h2 class="heading-secondary">
+			<span id="scoreboard" class="score">
+				<span id="score__one"></span> :
+				<span id="score__two"></span>
+			</span>
+			<div>
+				<button id="btn" type="button">Start</button>
+			</div>
+		</h2>
 
-	<canvas id="canvas"></canvas>
+		<canvas id="canvas"></canvas>
 
-	<script type="text/javascript" src="public/scripts/game.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+	</div>
 </body>
 </html>

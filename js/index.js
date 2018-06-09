@@ -2,13 +2,13 @@ window.addEventListener("keydown", onKeyDown, false);
 window.addEventListener("keyup", onKeyUp, false);
 
 var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
-window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-window.requestAnimationFrame = requestAnimationFrame;
+							window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+							window.requestAnimationFrame = requestAnimationFrame;
 
-var startButton = document.getElementById("start");
+var startButton = document.getElementById("btn");
 var scoreboard = document.getElementById("scoreboard");
-var score1 = document.getElementById("score1");
-var score2 = document.getElementById("score2");
+var score1 = document.getElementById("score__one");
+var score2 = document.getElementById("score__two");
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var keyW = false;
@@ -91,16 +91,16 @@ function draw() {
 
 	// Player Movement
 	if (keyS == true) {
-		player1Y = Math.min(750, player1Y += 5);
+		player1Y = Math.min(750, player1Y += 8);
 	}
 	if (keyW == true) {
-		player1Y = Math.max(0, player1Y -= 5);
+		player1Y = Math.max(0, player1Y -= 8);
 	}
 	if (keyDown == true) {
-		player2Y = Math.min(750, player2Y += 5);
+		player2Y = Math.min(750, player2Y += 8);
 	}
 	if (keyUp == true) {
-		player2Y = Math.max(0, player2Y -= 5);
+		player2Y = Math.max(0, player2Y -= 8);
 	}
 
 	score1.textContent = player1Score;
