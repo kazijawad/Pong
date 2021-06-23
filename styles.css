@@ -24,10 +24,11 @@ body {
 }
 
 .scoreboard {
+	margin-bottom: 2rem;
 	font-size: 4rem;
 }
 
-.canvas {
+.stage {
 	margin: 0 auto;
 	border: .3rem solid #000;
 	background-color: white;
