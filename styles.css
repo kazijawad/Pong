@@ -1,36 +1,36 @@
 *, *::after, *::before {
-	margin: 0;
-	padding: 0;
-	box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
 }
 
 html {
-	font-size: 62.5%;
+    font-size: 62.5%;
 }
 
 body {
-	box-sizing: border-box;
-	font-family: 'Roboto Condensed', sans-serif;
-	text-align: center;
-	color: #fff;
-	background-image: linear-gradient(to bottom, #6c7d99, #233044 70%);
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+    color: #fff;
+    background-image: linear-gradient(to bottom, #6c7d99, #233044 70%);
 }
 
 .container {
-	height: 100vh;
-	display: flex;
-  	flex-direction: column;
-	justify-content: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .scoreboard {
-	margin-bottom: 2rem;
-	font-size: 4rem;
+    margin-bottom: 2rem;
+    font-size: 4rem;
 }
 
 .stage {
-	margin: 0 auto;
-	border: .3rem solid #000;
-	background-color: white;
-	box-shadow: 0 4rem 8rem 2rem rgba(0, 0, 0, 0.4);
+    margin: 0 auto;
+    border: .3rem solid #000;
+    background-color: white;
+    box-shadow: 0 4rem 8rem 2rem rgba(0, 0, 0, 0.4);
 }
