@@ -51,13 +51,13 @@ class App {
         this.ctx = this.elements.canvas.getContext("2d");
 
         this.player = {
-            x: 10,
+            x: 0,
             y: 260,
             score: 0
         };
 
         this.computer = {
-            x: 580,
+            x: 590,
             y: 260,
             score: 0
         };
