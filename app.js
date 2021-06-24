@@ -79,7 +79,7 @@ class App {
 
     render() {
         // Clear Canvas
-        this.ctx.clearRect(0, 0, 600, 600);
+        this.ctx.clearRect(0, 0, this.elements.canvas.width, this.elements.canvas.height);
         this.ctx.save();
 
         // Render Player
@@ -133,7 +133,8 @@ class App {
         }
 
         // Computer Movement
-        this.computer.y = Math.min(550, Math.max(0, this.ball.y));
+        const computerMovement = (this.ball.y + (Math.sign(this.ball.vy) * ((Math.random() + 1) * 2))) * Math.min(Math.max((this.ball.x / this.elements.canvas.width), 0.3), 0.9);
+        this.computer.y = Math.min(550, Math.max(0, computerMovement));
 
         this.elements.playerScore.textContent = this.player.score;
         this.elements.computerScore.textContent = this.computer.score;
