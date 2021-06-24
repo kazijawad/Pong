@@ -9,10 +9,10 @@ class App {
 
     handleKeyDown(event) {
         switch (event.key) {
-            case 'w':
+            case "w":
                 this.up = true;
                 break;
-            case 's':
+            case "s":
                 this.down = true;
                 break;
         }
@@ -20,10 +20,10 @@ class App {
 
     handleKeyUp(event) {
         switch (event.key) {
-            case 'w':
+            case "w":
                 this.up = false;
                 break;
-            case 's':
+            case "s":
                 this.down = false;
                 break;
         }
